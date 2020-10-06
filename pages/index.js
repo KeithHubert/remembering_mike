@@ -1,5 +1,5 @@
 import React from 'react'
-import { withApollo } from '../lib/apollo'
+import withApollo from '../lib/apollo'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_POSTS } from '../gql/getPosts'
 
@@ -11,7 +11,7 @@ const IndexPage = () => {
   return (
     <>
       <h1>
-        <h3>Setting up Apollo GraphQL in Next.js with Server Side Rendering</h3>
+        <h3>Remembering Mike</h3>
       </h1>
       <div>
         {data.posts.map(data => (
