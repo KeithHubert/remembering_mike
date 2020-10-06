@@ -2,6 +2,7 @@ import React from 'react'
 import withApollo from '../lib/apollo'
 import { useQuery } from '@apollo/react-hooks'
 import { GET_POSTS } from '../gql/getPosts'
+import NavBar from './components/NavBar'
 
 const IndexPage = () => {
   const { loading, error, data } = useQuery(GET_POSTS)
@@ -10,9 +11,8 @@ const IndexPage = () => {
 
   return (
     <>
-      <h1>
-        <h3>Remembering Mike</h3>
-      </h1>
+      <NavBar />
+      <h1>Remembering Mike</h1>
       <div>
         {data.posts.map(data => (
           <ul key={data.id}>
